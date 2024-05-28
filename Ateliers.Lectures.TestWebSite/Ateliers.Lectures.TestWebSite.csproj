@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Ateliers.Lectures.TestWebSite</RootNamespace>
+    <Configurations>develop;master-release;staging</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\config.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\config.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\config.js" />
+  </ItemGroup>
+
+</Project>

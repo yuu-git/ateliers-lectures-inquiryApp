@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問い合わせフォーム</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // 環境変数を設定
+        window.env = 'development'; // 必要に応じて 'production' に変更
+    </script>
+</head>
+<body>
+    <h1>問い合わせフォーム</h1>
+    <form id="inquiryForm" method="post">
+        <div class="form-group">
+            <label>お問い合わせ項目:</label>
+            <div class="checkbox-group">
+                <div><input type="checkbox" name="inquiryItems" value="質問"><label> 質問</label></div>
+                <div><input type="checkbox" name="inquiryItems" value="リクエスト"><label> リクエスト</label></div>
+                <div><input type="checkbox" name="inquiryItems" value="その他"><label> その他</label></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name">お名前:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">電話番号:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </div>
+        <div class="form-group">
+            <label for="companyName">会社名:</label>
+            <input type="text" id="companyName" name="companyName">
+        </div>
+        <div class="form-group">
+            <label for="department">所属部署:</label>
+            <select id="department" name="department">
+                <option value="">選択してください</option>
+                <option value="sales">営業</option>
+                <option value="development">開発</option>
+                <option value="hr">人事</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>当社をどこで知りましたか？:</label>
+            <div class="checkbox-group">
+                <div><input type="checkbox" name="foundOutMethods" value="インターネット"><label> インターネット</label></div>
+                <div><input type="checkbox" name="foundOutMethods" value="友人"><label> 友人</label></div>
+                <div><input type="checkbox" name="foundOutMethods" value="広告"><label> 広告</label></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="content">お問い合わせ内容:</label>
+            <textarea id="content" name="content" required></textarea>
+        </div>
+        <button type="submit">送信</button>
+    </form>
+    <script src="config.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
